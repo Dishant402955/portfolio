@@ -14,7 +14,7 @@ export const Hero = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setStart(true);
-    }, 3200);
+    }, 2700);
     return () => clearTimeout(timer);
   }, []);
 
@@ -51,7 +51,6 @@ export const Hero = () => {
         animate={start ? "show" : "hidden"}
         className="max-w-4xl w-full flex flex-col items-center text-center"
       >
-        {/* Intro */}
         <motion.div variants={item}>
           <ShinyText
             text="Hi, I'm Dishant"
@@ -81,7 +80,6 @@ export const Hero = () => {
           Focused on performance, system design, and clean architecture.
         </motion.p>
 
-        {/* CTA */}
         <motion.div
           variants={{
             hidden: { opacity: 0, y: 30, scale: 0.96 },

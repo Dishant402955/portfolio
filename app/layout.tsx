@@ -23,7 +23,6 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", "font-sans", figtree.variable)}
     >
       <body className="min-h-full flex flex-col w-full">
-        {/* 🔥 Navbar knows when to show brand */}
         <Navbar showBrand={phase !== "intro"} />
 
         <AnimatePresence>
