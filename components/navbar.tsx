@@ -3,8 +3,9 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
-export const Navbar = () => {
+export const Navbar = ({ showBrand }: { showBrand: boolean }) => {
   const navItems = [
     { name: "Projects", link: "#projects" },
     { name: "Blog", link: "#blog" },
@@ -19,8 +20,7 @@ export const Navbar = () => {
       setActiveHash(window.location.hash);
     };
 
-    updateHash(); // initial
-
+    updateHash();
     window.addEventListener("hashchange", updateHash);
     return () => window.removeEventListener("hashchange", updateHash);
   }, []);
@@ -28,7 +28,20 @@ export const Navbar = () => {
   return (
     <div className="fixed top-10 w-full flex justify-center items-center h-14">
       <main className="h-full border border-white/10 w-[70%] rounded-4xl bg-neutral-900/80 flex justify-between items-center px-15">
-        <span className="text-lg text-neutral-300">Dishant</span>
+        {/* 🔥 only appears during transition */}
+        {showBrand && (
+          <motion.span
+            layoutId="brand"
+            className="text-lg text-neutral-300 font-semibold"
+            transition={{
+              type: "spring",
+              stiffness: 120,
+              damping: 20,
+            }}
+          >
+            Dishant
+          </motion.span>
+        )}
 
         <div className="h-full flex justify-center items-center gap-x-8">
           {navItems.map((item, idx) => {
@@ -38,7 +51,7 @@ export const Navbar = () => {
               <Link
                 key={idx}
                 href={item.link}
-                onClick={() => setActiveHash(item.link)} // 🔥 immediate update
+                onClick={() => setActiveHash(item.link)}
                 className={cn(
                   "h-10 w-26 rounded-3xl flex justify-center items-center text-lg transition",
                   isActive
