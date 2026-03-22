@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Card, CardDescription, CardTitle } from "./ui/cards-demo-3";
 import { cn } from "@/lib/utils";
+import ScrollStack from "@/components/ui/scroll-stack";
 
 export const Projects = () => {
   const items = [
@@ -88,91 +89,89 @@ export const Projects = () => {
   ];
 
   return (
-    <section
-      id="projects"
-      className="min-h-screen w-full flex flex-col px-6 md:px-14 py-20"
-    >
-      <h2 className="text-3xl md:text-4xl font-semibold mb-16">Projects</h2>
+    <section id="projects" className="w-full py-28">
+      <div className="px-4 md:px-6 lg:px-10 mb-24">
+        <h2 className="text-3xl md:text-4xl font-semibold">Projects</h2>
+      </div>
 
-      <div className="flex flex-col gap-16">
+      <ScrollStack className="w-full">
         {items.map((item, idx) => {
           const isReversed = idx % 2 !== 0;
 
           return (
-            <Card key={item.id} className="w-full max-w-5xl">
-              <div
-                className={cn(
-                  "flex flex-col md:flex-row items-center gap-10",
-                  isReversed && "md:flex-row-reverse",
-                )}
+            <div className="flex justify-center w-full">
+              <Card
+                key={item.id}
+                className="w-full max-w-[1200px] h-[440px] p-8 bg-white dark:bg-neutral-900"
               >
-                <div className="w-full md:w-1/2">
-                  <div className="w-full h-52 md:h-64 rounded-lg overflow-hidden">
-                    <img
-                      src={
-                        item.thumbURL ||
-                        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop"
-                      }
-                      alt={item.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-
-                <div className="w-full md:w-1/2 flex flex-col">
-                  <CardTitle className="text-2xl">{item.title}</CardTitle>
-
-                  <CardDescription className="mt-3 text-base">
-                    {item.description}
-                  </CardDescription>
-
-                  <div className="flex flex-wrap gap-2 mt-5">
-                    {item.techStack.map((tech, i) => (
-                      <span
-                        key={i}
-                        className="text-xs px-3 py-1 rounded-full bg-white/5 text-neutral-300"
-                      >
-                        {tech.name}
-                      </span>
-                    ))}
+                <div
+                  className={cn(
+                    "flex flex-col md:flex-row items-center gap-10 h-full",
+                    isReversed && "md:flex-row-reverse",
+                  )}
+                >
+                  <div className="w-full md:w-1/2">
+                    <div className="w-full h-56 md:h-64 rounded-xl overflow-hidden">
+                      <img
+                        src={
+                          item.thumbURL ||
+                          "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop"
+                        }
+                        alt={item.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
 
-                  <div className="flex flex-wrap gap-3 mt-6">
-                    {item.previewLink && (
+                  <div className="w-full md:w-1/2 flex flex-col justify-center">
+                    <CardTitle className="text-2xl">{item.title}</CardTitle>
+
+                    <CardDescription className="mt-3 text-base">
+                      {item.description}
+                    </CardDescription>
+
+                    <div className="flex flex-wrap gap-2 mt-5">
+                      {item.techStack.map((tech, i) => (
+                        <span
+                          key={i}
+                          className="text-xs px-3 py-1 rounded-full bg-black/5 dark:bg-white/10 text-neutral-600 dark:text-neutral-300"
+                        >
+                          {tech.name}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="flex flex-wrap gap-3 mt-6">
                       <a
                         href={item.previewLink}
                         target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-4 py-2 text-sm rounded-lg bg-white text-black font-medium hover:opacity-90 transition"
+                        className="px-4 py-2 text-sm rounded-lg bg-black text-white dark:bg-white dark:text-black font-medium"
                       >
                         Live Preview
                       </a>
-                    )}
 
-                    <Link
-                      href={`/project/${item.slug}`}
-                      className="px-4 py-2 text-sm rounded-lg border border-white/20 text-white hover:bg-white/10 transition"
-                    >
-                      View Details
-                    </Link>
+                      <Link
+                        href={`/project/${item.slug}`}
+                        className="px-4 py-2 text-sm rounded-lg border border-black/20 dark:border-white/20"
+                      >
+                        View Details
+                      </Link>
 
-                    {item.projectLink && (
                       <a
                         href={item.projectLink}
                         target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-4 py-2 text-sm rounded-lg border border-white/20 text-neutral-300 hover:text-white hover:bg-white/10 transition"
+                        className="px-4 py-2 text-sm rounded-lg border border-black/20 dark:border-white/20 text-neutral-600 dark:text-neutral-300"
                       >
                         Source Code
                       </a>
-                    )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Card>
+              </Card>
+            </div>
           );
         })}
-      </div>
+      </ScrollStack>
     </section>
   );
 };
