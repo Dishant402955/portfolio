@@ -89,8 +89,8 @@ export const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="w-full py-28">
-      <div className="px-4 md:px-6 lg:px-10 mb-24">
+    <section id="projects" className="w-full pt-18 pb-10">
+      <div className="px-4 md:px-6 lg:px-10 mb-24 flex justify-center items-center">
         <h2 className="text-3xl md:text-4xl font-semibold">Projects</h2>
       </div>
 
@@ -102,7 +102,7 @@ export const Projects = () => {
             <div className="flex justify-center w-full">
               <Card
                 key={item.id}
-                className="w-full max-w-[1200px] h-[440px] p-8 bg-white dark:bg-neutral-900"
+                className="w-full max-w-[1000px] h-[440px] p-8 bg-white dark:bg-neutral-900"
               >
                 <div
                   className={cn(
