@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "motion/react";
 
 export const Navbar = ({ showBrand }: { showBrand: boolean }) => {
   const navItems = [
+    { name: "Home", link: "#home" },
     { name: "Projects", link: "#projects" },
     { name: "Blog", link: "#blog" },
     { name: "About", link: "#about" },
@@ -18,13 +19,53 @@ export const Navbar = ({ showBrand }: { showBrand: boolean }) => {
 
   useEffect(() => {
     const updateHash = () => {
-      setActiveHash(window.location.hash || "#projects");
+      setActiveHash(window.location.hash || "#home");
     };
 
     updateHash();
     window.addEventListener("hashchange", updateHash);
     return () => window.removeEventListener("hashchange", updateHash);
   }, []);
+
+  useEffect(() => {
+    const ids = navItems.map((n) => n.link.replace("#", ""));
+    const sections = ids
+      .map((id) => document.getElementById(id))
+      .filter(Boolean) as HTMLElement[];
+
+    let isScrolling = false;
+
+    const handleScroll = () => {
+      isScrolling = true;
+
+      let currentSection = sections[0];
+
+      for (const section of sections) {
+        const rect = section.getBoundingClientRect();
+
+        // section whose top is closest but still above mid screen
+        if (rect.top <= window.innerHeight * 0.4) {
+          currentSection = section;
+        }
+      }
+
+      const newHash = `#${currentSection.id}`;
+
+      if (newHash !== activeHash) {
+        setActiveHash(newHash);
+        history.replaceState(null, "", newHash);
+      }
+
+      // reset scroll flag after frame
+      requestAnimationFrame(() => {
+        isScrolling = false;
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [activeHash]);
 
   return (
     <div className="fixed top-6 w-full flex justify-center z-50 px-4">
