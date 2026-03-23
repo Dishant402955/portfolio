@@ -162,7 +162,147 @@ export const About = () => {
   const [selectedTech, setSelectedTech] = useState<any>(null);
 
   return (
-    <section id="about" className="w-full px-6 md:px-14 py-28">
+    <section id="about" className="relative w-full px-6 md:px-14 py-28">
+      <div className="absolute inset-0 pointer-events-none -z-10">
+        <div className="absolute top-[6%] right-0 w-[900px] h-[900px]">
+          <svg className="w-full h-full" viewBox="0 0 900 900">
+            {/* OUTER ORBIT */}
+            <g className="origin-[100%_50%] animate-[spin_110s_linear_infinite]">
+              <circle
+                cx="900"
+                cy="450"
+                r="420"
+                stroke="rgba(255,255,255,0.34)"
+                strokeWidth="1.8"
+                fill="none"
+              />
+
+              {/* 4 evenly spaced stars */}
+              <g transform="rotate(0 900 450)">
+                <circle cx="480" cy="450" r="5" fill="white" />
+              </g>
+              <g transform="rotate(90 900 450)">
+                <circle
+                  cx="480"
+                  cy="450"
+                  r="4.5"
+                  fill="rgba(255,255,255,0.85)"
+                />
+              </g>
+              <g transform="rotate(180 900 450)">
+                <circle cx="480" cy="450" r="4" fill="rgba(255,255,255,0.75)" />
+              </g>
+              <g transform="rotate(270 900 450)">
+                <circle
+                  cx="480"
+                  cy="450"
+                  r="4.5"
+                  fill="rgba(255,255,255,0.9)"
+                />
+              </g>
+            </g>
+
+            {/* MID ORBIT */}
+            <g className="origin-[100%_50%] animate-[spin_85s_linear_infinite]">
+              <circle
+                cx="900"
+                cy="450"
+                r="330"
+                stroke="rgba(255,255,255,0.28)"
+                strokeWidth="1.6"
+                fill="none"
+              />
+
+              <g transform="rotate(0 900 450)">
+                <circle
+                  cx="570"
+                  cy="450"
+                  r="4.5"
+                  fill="rgba(255,255,255,0.9)"
+                />
+              </g>
+              <g transform="rotate(120 900 450)">
+                <circle cx="570" cy="450" r="4" fill="rgba(255,255,255,0.7)" />
+              </g>
+              <g transform="rotate(240 900 450)">
+                <circle
+                  cx="570"
+                  cy="450"
+                  r="4.2"
+                  fill="rgba(255,255,255,0.8)"
+                />
+              </g>
+            </g>
+
+            {/* INNER ORBIT */}
+            <g className="origin-[100%_50%] animate-[spin_65s_linear_infinite]">
+              <circle
+                cx="900"
+                cy="450"
+                r="250"
+                stroke="rgba(255,255,255,0.22)"
+                strokeWidth="1.4"
+                fill="none"
+              />
+
+              <g transform="rotate(0 900 450)">
+                <circle cx="650" cy="450" r="4" fill="rgba(255,255,255,0.85)" />
+              </g>
+              <g transform="rotate(120 900 450)">
+                <circle
+                  cx="650"
+                  cy="450"
+                  r="3.5"
+                  fill="rgba(255,255,255,0.65)"
+                />
+              </g>
+              <g transform="rotate(240 900 450)">
+                <circle
+                  cx="650"
+                  cy="450"
+                  r="3.8"
+                  fill="rgba(255,255,255,0.75)"
+                />
+              </g>
+            </g>
+
+            {/* CORE ORBIT */}
+            <g className="origin-[100%_50%] animate-[spin_50s_linear_infinite]">
+              <circle
+                cx="900"
+                cy="450"
+                r="170"
+                stroke="rgba(255,255,255,0.18)"
+                strokeWidth="1.3"
+                fill="none"
+              />
+
+              <g transform="rotate(0 900 450)">
+                <circle
+                  cx="730"
+                  cy="450"
+                  r="3.5"
+                  fill="rgba(255,255,255,0.75)"
+                />
+              </g>
+              <g transform="rotate(180 900 450)">
+                <circle cx="730" cy="450" r="3" fill="rgba(255,255,255,0.55)" />
+              </g>
+            </g>
+          </svg>
+
+          {/* 🔥 CORRECT VISIBILITY CONTROL */}
+          <div
+            className="absolute inset-0"
+            style={{
+              WebkitMaskImage:
+                "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0) 90%)",
+              maskImage:
+                "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0) 90%)",
+            }}
+          />
+        </div>
+      </div>
       <div className="max-w-6xl mx-auto flex flex-col gap-20">
         <h2 className="text-3xl md:text-4xl font-semibold">About</h2>
 
@@ -182,7 +322,7 @@ export const About = () => {
         <div className="flex flex-col gap-8">
           <h3 className="text-lg font-medium text-neutral-300">Tools I Use</h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 w-fit">
             {techGroups.map((group) => (
               <motion.div
                 key={group.title}
