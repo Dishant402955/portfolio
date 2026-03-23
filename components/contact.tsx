@@ -17,7 +17,86 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="w-full px-6 md:px-14 py-28">
+    <section id="contact" className="w-full px-6 md:px-14 py-28 relative">
+      <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
+        <div className="absolute left-[-320px] top-[10%] w-[500px] h-[500px] opacity-90">
+          <svg className="w-full h-full" viewBox="0 0 500 500">
+            {/* ring */}
+            <circle
+              cx="250"
+              cy="250"
+              r="200"
+              stroke="rgba(255,255,255,0.25)"
+              strokeWidth="2"
+              fill="none"
+            />
+
+            {/* diagonal line */}
+            <line
+              x1="100"
+              y1="100"
+              x2="400"
+              y2="400"
+              stroke="rgba(255,255,255,0.3)"
+              strokeWidth="1.6"
+            />
+
+            {/* horizontal */}
+            <line
+              x1="0"
+              y1="250"
+              x2="500"
+              y2="250"
+              stroke="rgba(255,255,255,0.28)"
+              strokeWidth="1.5"
+            />
+
+            {/* nodes */}
+            <circle cx="250" cy="250" r="5" fill="white" />
+            <circle cx="150" cy="250" r="4" fill="rgba(255,255,255,0.85)" />
+            <circle cx="350" cy="250" r="4" fill="rgba(255,255,255,0.85)" />
+          </svg>
+        </div>
+
+        <div className="absolute right-[-320px] top-[10%] w-[500px] h-[500px] opacity-90">
+          <svg className="w-full h-full" viewBox="0 0 500 500">
+            <circle
+              cx="250"
+              cy="250"
+              r="200"
+              stroke="rgba(255,255,255,0.25)"
+              strokeWidth="2"
+              fill="none"
+            />
+
+            {/* diagonal line */}
+            <line
+              x1="120"
+              y1="50"
+              x2="380"
+              y2="450"
+              stroke="rgba(255,255,255,0.28)"
+              strokeWidth="1.6"
+            />
+
+            {/* angled line */}
+            <line
+              x1="0"
+              y1="200"
+              x2="500"
+              y2="300"
+              stroke="rgba(255,255,255,0.26)"
+              strokeWidth="1.5"
+            />
+
+            {/* nodes */}
+            <circle cx="250" cy="250" r="5" fill="white" />
+            <circle cx="300" cy="200" r="4" fill="rgba(255,255,255,0.85)" />
+            <circle cx="200" cy="320" r="4" fill="rgba(255,255,255,0.85)" />
+          </svg>
+        </div>
+      </div>
+
       <div className="max-w-4xl mx-auto flex flex-col gap-14 items-center text-center">
         <h2 className="text-3xl md:text-4xl font-semibold">Contact</h2>
 
@@ -80,7 +159,7 @@ export const Contact = () => {
             <Link
               href="https://linkedin.com/in/dishant-radadiya"
               target="_blank"
-              className="text-neutral-200 font-medium hover:underline"
+              className="text-neutral-200 font-medium hover:underline truncate"
             >
               linkedin.com/in/dishant-radadiya
             </Link>
