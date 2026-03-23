@@ -76,7 +76,7 @@ export const Navbar = ({ showBrand }: { showBrand: boolean }) => {
         className={cn(
           "w-full max-w-4xl h-14",
           "flex items-center justify-between px-6",
-          "rounded-full border border-white/10",
+          "rounded-full border border-white/30",
           "bg-neutral-900/60 backdrop-blur-xl",
         )}
       >

@@ -329,7 +329,7 @@ export const About = () => {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
-                className="rounded-xl border border-white/10 bg-white/[0.02] p-5"
+                className="rounded-xl border border-white/20 bg-white/[0.02] p-5"
               >
                 <p className="text-sm text-neutral-500 mb-4">{group.title}</p>
 
@@ -338,7 +338,7 @@ export const About = () => {
                     <button
                       key={item.name}
                       onClick={() => setSelectedTech(item)}
-                      className="px-3 py-1 rounded-md cursor-pointer  text-sm bg-white/5 border border-white/10 hover:bg-white/10 transition"
+                      className="px-3 py-1 rounded-md cursor-pointer  text-sm bg-white/5 border border-white/20 hover:bg-white/10 transition"
                     >
                       {item.name}
                     </button>
@@ -371,7 +371,7 @@ export const About = () => {
               <Link
                 href="https://github.com/Dishant402955"
                 target="_blank"
-                className="block border border-white/10 rounded-xl p-5 hover:border-white/20 hover:bg-white/[0.03] transition"
+                className="block border border-white/20 rounded-xl p-5 hover:border-white/50 hover:bg-white/[0.03] transition"
               >
                 <p className="text-neutral-400 text-sm mb-1">GitHub</p>
                 <p className="text-neutral-200 font-medium">
@@ -397,7 +397,7 @@ export const About = () => {
               <Link
                 href="https://linkedin.com/in/dishant-radadiya"
                 target="_blank"
-                className="block border border-white/10 rounded-xl p-5 hover:border-white/20 hover:bg-white/[0.03] transition"
+                className="block border border-white/20 rounded-xl p-5 hover:border-white/50 hover:bg-white/[0.03] transition"
               >
                 <p className="text-neutral-400 text-sm mb-1">LinkedIn</p>
                 <p className="text-neutral-200 font-medium">
@@ -423,7 +423,7 @@ export const About = () => {
               <Link
                 href="https://leetcode.com/u/dishantradadiya3036"
                 target="_blank"
-                className="block border border-white/10 rounded-xl p-5 hover:border-white/20 hover:bg-white/[0.03] transition"
+                className="block border border-white/20 rounded-xl p-5 hover:border-white/50 hover:bg-white/[0.03] transition"
               >
                 <p className="text-neutral-400 text-sm mb-1">LeetCode</p>
                 <p className="text-neutral-200 font-medium">

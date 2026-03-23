@@ -128,7 +128,7 @@ export const Contact = () => {
               damping: 12,
               duration: 0.3,
             }}
-            className="flex-1 border border-white/10 min-w-[33%] rounded-xl p-6 bg-white/2 hover:border-white/20 hover:bg-white/[0.04] transition"
+            className="flex-1 border border-white/20 min-w-[33%] rounded-xl p-6 bg-white/2 hover:border-white/50 hover:bg-white/[0.04] transition"
           >
             <p className="text-neutral-500 text-sm mb-2">Email</p>
             <div className="w-full flex justify-center items-center gap-x-2 ">
@@ -153,7 +153,7 @@ export const Contact = () => {
               damping: 12,
               duration: 0.3,
             }}
-            className="flex-1 border border-white/10 rounded-xl p-6 bg-white/[0.02] hover:border-white/20 hover:bg-white/[0.04] transition"
+            className="flex-1 border border-white/20 rounded-xl p-6 bg-white/[0.02] hover:border-white/50 hover:bg-white/[0.04] transition"
           >
             <p className="text-neutral-500 text-sm mb-2">LinkedIn</p>
             <Link
@@ -176,7 +176,7 @@ export const Contact = () => {
               damping: 12,
               duration: 0.3,
             }}
-            className="flex-1 border border-white/10 rounded-xl p-6 bg-white/[0.02] hover:border-white/20 hover:bg-white/[0.04] transition"
+            className="flex-1 border border-white/20 rounded-xl p-6 bg-white/[0.02] hover:border-white/50 hover:bg-white/[0.04] transition"
           >
             <p className="text-neutral-500 text-sm mb-2">Resume</p>
             <Link
