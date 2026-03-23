@@ -45,6 +45,47 @@ export const Hero = () => {
       id="home"
       className="min-h-screen w-full flex items-center justify-center px-6 pt-24"
     >
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_10%,rgba(255,255,255,0.12),transparent_55%)]" />
+
+        <div
+          className="absolute inset-0 opacity-[0.12]"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)
+            `,
+            backgroundSize: "40px 40px",
+          }}
+        />
+
+        <div
+          className="absolute inset-0 opacity-[0.25]"
+          style={{
+            backgroundImage: `
+              radial-gradient(circle, rgba(255,255,255,0.6) 0.8px, transparent 0.8px)
+            `,
+            backgroundSize: "14px 14px",
+          }}
+        />
+
+        <div
+          className="absolute inset-0 opacity-[0.05]"
+          style={{
+            backgroundImage: `
+              repeating-linear-gradient(
+                135deg,
+                rgba(255,255,255,0.4) 0px,
+                rgba(255,255,255,0.4) 1px,
+                transparent 1px,
+                transparent 80px
+              )
+            `,
+          }}
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70" />
+      </div>
       <motion.div
         variants={container}
         initial="hidden"

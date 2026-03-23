@@ -89,7 +89,7 @@ export const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="w-full pt-18 pb-10">
+    <section id="projects" className="w-full pt-18 pb-10 relative">
       <div className="px-4 md:px-6 lg:px-10 mb-24 flex justify-center items-center">
         <h2 className="text-3xl md:text-4xl font-semibold">Projects</h2>
       </div>
@@ -177,8 +177,8 @@ export const Projects = () => {
       <style jsx>{`
         .beam-dot {
           position: absolute;
-          width: 10px;
-          height: 10px;
+          width: 15px;
+          height: 15px;
           border-radius: 9999px;
           background: linear-gradient(45deg, #ffaa40, #9c40ff);
           box-shadow: 0 0 12px #9c40ff;
