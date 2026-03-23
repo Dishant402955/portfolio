@@ -68,12 +68,6 @@ const techGroups = [
           "It's a backend framework for Node.js which is very minimalistic & unopiniated.",
       },
       {
-        name: "Hono",
-        logo: "/hono.svg",
-        description:
-          "It's a modern day succesor to express.js focusing on edge deployments capabilities",
-      },
-      {
         name: "Socket.IO",
         logo: "/socketdotio.svg",
         description:
@@ -135,12 +129,6 @@ const techGroups = [
         logo: "/git.svg",
         description:
           "It's a version control system to handle code-bases the right way and i always praise it since the day i learned it.",
-      },
-      {
-        name: "Electron",
-        logo: "/electron.svg",
-        description:
-          "It's a frameowrk for building cross-platform dekstop apps with javascript, it wraps the html,css & js code around google's chromium engine & generates an binary. A ton of modern desktop are built with this framework.",
       },
       {
         name: "Ffmpeg",
@@ -338,8 +326,15 @@ export const About = () => {
                     <button
                       key={item.name}
                       onClick={() => setSelectedTech(item)}
-                      className="px-3 py-1 rounded-md cursor-pointer  text-sm bg-white/5 border border-white/20 hover:bg-white/10 transition"
+                      className="px-3 py-1 rounded-md cursor-pointer  text-sm bg-white/5 border border-white/20 hover:bg-white/10 transition flex justify-center items-center gap-x-2"
                     >
+                      <Image
+                        height={15}
+                        width={15}
+                        alt="logo"
+                        src={item.logo}
+                        className="text-white"
+                      />
                       {item.name}
                     </button>
                   ))}
