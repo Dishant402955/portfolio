@@ -99,14 +99,15 @@ export const Projects = () => {
           const isReversed = idx % 2 !== 0;
 
           return (
-            <div className="flex justify-center w-full">
-              <Card
-                key={item.id}
-                className="w-full max-w-[1000px] h-[440px] p-8 bg-white dark:bg-neutral-900"
-              >
+            <div className="flex justify-center w-full" key={item.id}>
+              <Card className="relative overflow-hidden rounded-xl w-full max-w-[1000px] h-[440px] bg-white dark:bg-neutral-900">
+                <div className="pointer-events-none absolute inset-0">
+                  <div className="beam-dot" />
+                </div>
+
                 <div
                   className={cn(
-                    "flex flex-col md:flex-row items-center gap-10 h-full",
+                    "flex flex-col md:flex-row items-center gap-10 h-full p-8",
                     isReversed && "md:flex-row-reverse",
                   )}
                 >
@@ -172,6 +173,41 @@ export const Projects = () => {
           );
         })}
       </ScrollStack>
+
+      <style jsx>{`
+        .beam-dot {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-radius: 9999px;
+          background: linear-gradient(45deg, #ffaa40, #9c40ff);
+          box-shadow: 0 0 12px #9c40ff;
+          animation: travel 8s linear infinite;
+        }
+
+        @keyframes travel {
+          0% {
+            top: 0;
+            left: 0;
+          }
+          25% {
+            top: 0;
+            left: calc(100% - 10px);
+          }
+          50% {
+            top: calc(100% - 10px);
+            left: calc(100% - 10px);
+          }
+          75% {
+            top: calc(100% - 10px);
+            left: 0;
+          }
+          100% {
+            top: 0;
+            left: 0;
+          }
+        }
+      `}</style>
     </section>
   );
 };
