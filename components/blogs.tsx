@@ -62,8 +62,8 @@ export const Blogs = () => {
   ];
 
   return (
-    <section id="blog" className="w-full py-20">
-      <div className="px-4 md:px-6 lg:px-10 mb-16 text-center">
+    <section id="blog" className="w-full pb-15 pt-20">
+      <div className="px-4 md:px-6 lg:px-10 mb-16 text-center pt-4">
         <h2 className="text-3xl md:text-4xl font-semibold text-white">Blogs</h2>
       </div>
 

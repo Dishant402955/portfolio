@@ -89,8 +89,8 @@ export const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="w-full pt-18 pb-10 relative">
-      <div className="px-4 md:px-6 lg:px-10 mb-24 flex justify-center items-center">
+    <section id="projects" className="w-full pt-18 relative">
+      <div className="px-4 md:px-6 lg:px-10 mb-18 flex justify-center items-center pt-6">
         <h2 className="text-3xl md:text-4xl font-semibold">Projects</h2>
       </div>
 
