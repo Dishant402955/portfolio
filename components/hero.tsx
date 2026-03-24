@@ -110,7 +110,10 @@ export const Hero = () => {
         >
           I build fast, precise <br />
           <span className="bg-linear-to-r from-color-3 via-color-4 to-color-5 bg-clip-text text-transparent">
-            <MorphingText texts={texts} className="text-white text-[2.8rem]" />
+            <MorphingText
+              texts={texts}
+              className="text-white text-[2.8rem] max-sm:text-4xl"
+            />
           </span>
         </motion.h1>
 

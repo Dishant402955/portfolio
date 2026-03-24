@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { MdMenu } from "react-icons/md";
 
 export const Navbar = ({ showBrand }: { showBrand: boolean }) => {
   const navItems = [
@@ -98,7 +99,7 @@ export const Navbar = ({ showBrand }: { showBrand: boolean }) => {
                 key={item.link}
                 href={item.link}
                 onClick={() => setActiveHash(item.link)}
-                className="relative px-4 py-1.5 text-sm font-medium"
+                className="relative px-4 py-1.5 text-sm font-medium max-md:hidden"
               >
                 {isActive && (
                   <motion.span
@@ -131,7 +132,7 @@ export const Navbar = ({ showBrand }: { showBrand: boolean }) => {
           onClick={() => setOpen((prev) => !prev)}
           className="md:hidden text-base text-neutral-300"
         >
-          Menu
+          <MdMenu />
         </button>
       </motion.nav>
 

@@ -19,7 +19,7 @@ export const Contact = () => {
   return (
     <section id="contact" className="w-full px-6 md:px-14 py-28 relative">
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
-        <div className="absolute left-[-320px] top-[10%] w-[500px] h-[500px] opacity-90">
+        <div className="absolute left-[-320px] top-[10%] w-[500px] h-[500px] opacity-90 max-md:top-[-25%]">
           <svg className="w-full h-full" viewBox="0 0 500 500">
             {/* ring */}
             <circle
@@ -58,7 +58,7 @@ export const Contact = () => {
           </svg>
         </div>
 
-        <div className="absolute right-[-320px] top-[10%] w-[500px] h-[500px] opacity-90">
+        <div className="absolute right-[-320px] top-[10%] w-[500px] h-[500px] opacity-90 max-md:top-[75%]">
           <svg className="w-full h-full" viewBox="0 0 500 500">
             <circle
               cx="250"

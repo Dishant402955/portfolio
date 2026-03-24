@@ -45,7 +45,7 @@ const techGroups = [
           "It's a UI library with very high adoption across industry and also very solid cross-platfrom capabilities.",
       },
       {
-        name: "Tailwind CSS",
+        name: "Tailwind",
         logo: "/tailwindcss.svg",
         description:
           "It's framework for writing CSS without pain and i swear i never want to go back to vanilla CSS after i started using it.",
@@ -68,7 +68,7 @@ const techGroups = [
           "It's a backend framework for Node.js which is very minimalistic & unopiniated.",
       },
       {
-        name: "Socket.IO",
+        name: "Socket",
         logo: "/socketdotio.svg",
         description:
           "It's a rock-solid websocket library i use for all my real-time needs. ",
@@ -152,7 +152,7 @@ export const About = () => {
   return (
     <section id="about" className="relative w-full px-6 md:px-14 py-28">
       <div className="absolute inset-0 pointer-events-none -z-10">
-        <div className="absolute top-[6%] right-0 w-[900px] h-[900px]">
+        <div className="absolute top-[6%] right-0 w-[900px] h-[900px]  max-md:h-120 max-md:w-120">
           <svg className="w-full h-full" viewBox="0 0 900 900">
             {/* OUTER ORBIT */}
             <g className="origin-[100%_50%] animate-[spin_110s_linear_infinite]">
@@ -326,7 +326,9 @@ export const About = () => {
                     <button
                       key={item.name}
                       onClick={() => setSelectedTech(item)}
-                      className="px-3 py-1 rounded-md cursor-pointer  text-sm bg-white/5 border border-white/20 hover:bg-white/10 transition flex justify-center items-center gap-x-2"
+                      className="px-3 py-1 rounded-md cursor-pointer
+                      text-sm bg-white/5 border border-white/20 hover:bg-white/10 transition
+                      flex justify-center items-center gap-x-2 max-md:text-xs"
                     >
                       <Image
                         height={15}

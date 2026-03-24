@@ -35,7 +35,6 @@ export const Projects = () => {
         { name: "Nextjs", logo: "" },
         { name: "Shadcn UI", logo: "" },
         { name: "Appwrite", logo: "" },
-        { name: "PostgreSQL", logo: "" },
       ],
     },
     {
@@ -51,7 +50,6 @@ export const Projects = () => {
         { name: "Nextjs", logo: "" },
         { name: "Shadcn UI", logo: "" },
         { name: "Honojs", logo: "" },
-        { name: "PostgreSQL", logo: "" },
       ],
     },
     {
@@ -81,9 +79,7 @@ export const Projects = () => {
       techStack: [
         { name: "Nextjs", logo: "" },
         { name: "Shadcn UI", logo: "" },
-        { name: "Electronjs", logo: "" },
-        { name: "Honojs", logo: "" },
-        { name: "PostgreSQL", logo: "" },
+        { name: "Electron", logo: "" },
       ],
     },
   ];
@@ -99,7 +95,10 @@ export const Projects = () => {
           const isReversed = idx % 2 !== 0;
 
           return (
-            <div className="flex justify-center w-full" key={item.id}>
+            <div
+              className="flex justify-center w-full max-md:px-8"
+              key={item.id}
+            >
               <Card className="relative overflow-hidden rounded-xl w-full max-w-[1000px] h-[440px] bg-white dark:bg-neutral-900">
                 <div className="pointer-events-none absolute inset-0">
                   <div className="beam-dot" />
@@ -107,12 +106,12 @@ export const Projects = () => {
 
                 <div
                   className={cn(
-                    "flex flex-col md:flex-row items-center gap-10 h-full p-8",
+                    "flex flex-col md:flex-row items-center gap-10  max-md:gap-4  h-full p-8 max-md:p-0",
                     isReversed && "md:flex-row-reverse",
                   )}
                 >
                   <div className="w-full md:w-1/2">
-                    <div className="w-full h-56 md:h-64 rounded-xl overflow-hidden">
+                    <div className="w-full h-30 md:h-64 rounded-xl overflow-hidden">
                       <img
                         src={
                           item.thumbURL ||
@@ -125,9 +124,11 @@ export const Projects = () => {
                   </div>
 
                   <div className="w-full md:w-1/2 flex flex-col justify-center">
-                    <CardTitle className="text-2xl">{item.title}</CardTitle>
+                    <CardTitle className="text-2xl max-md:text-lg">
+                      {item.title}
+                    </CardTitle>
 
-                    <CardDescription className="mt-3 text-base">
+                    <CardDescription className="mt-3 text-basem max-md:text-sm">
                       {item.description}
                     </CardDescription>
 
@@ -142,28 +143,31 @@ export const Projects = () => {
                       ))}
                     </div>
 
-                    <div className="flex flex-wrap gap-3 mt-6">
+                    <div className="flex md:flex-wrap gap-3 mt-6">
                       <a
                         href={item.previewLink}
                         target="_blank"
-                        className="px-4 py-2 text-sm rounded-lg bg-black text-white dark:bg-white dark:text-black font-medium"
+                        className="px-4 py-2 text-sm max-md:text-xs rounded-lg bg-black text-white dark:bg-white dark:text-black font-medium"
                       >
-                        Live Preview
+                        <span className="max-md:hidden"> Live Preview</span>
+                        <span className="md:hidden">Preview</span>
                       </a>
 
                       <Link
                         href={`/project/${item.slug}`}
-                        className="px-4 py-2 text-sm rounded-lg border border-black/20 dark:border-white/20"
+                        className="px-4 py-2 text-sm max-md:text-xs rounded-lg border border-black/20 dark:border-white/20"
                       >
-                        View Details
+                        <span className="max-md:hidden"> View Details</span>
+                        <span className="md:hidden">Details</span>
                       </Link>
 
                       <a
                         href={item.projectLink}
                         target="_blank"
-                        className="px-4 py-2 text-sm rounded-lg border border-black/20 dark:border-white/20 text-neutral-600 dark:text-neutral-300"
+                        className="px-4 py-2 text-sm max-md:text-xs rounded-lg border border-black/20 dark:border-white/20 text-neutral-600 dark:text-neutral-300"
                       >
-                        Source Code
+                        <span className="max-md:hidden">Source Code</span>
+                        <span className="md:hidden">Source</span>
                       </a>
                     </div>
                   </div>
