@@ -1,14 +1,13 @@
 export const project = {
-  title: "Cross-Platform Clipboard",
+  title: "Instant share app",
   description:
-    "A secure cross-platform clipboard with end-to-end encryption and real-time sync across Android, iOS, and Windows.",
+    "A frictionless instant sharing web app with end-to-end encryption & real-time sync across connected devices.",
   longDescription:
     "This project focuses on seamless cross-device productivity. It allows users to securely sync clipboard data in real-time while ensuring end-to-end encryption. Built with performance and reliability in mind, it supports multiple platforms and provides a smooth user experience across devices.",
   techStack: ["Next.js", "Hono", "PostgreSQL", "WebSockets"],
   features: [
-    "End-to-end encrypted clipboard sync",
+    "End-to-end encrypted session",
     "Real-time updates across devices",
-    "Cross-platform support (Android, iOS, Windows)",
     "Minimal latency and high reliability",
   ],
   previewLink: "https://example.com",
