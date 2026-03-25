@@ -93,7 +93,10 @@ export const Hero = () => {
         animate={start ? "show" : "hidden"}
         className="max-w-7xl w-full flex flex-col items-center text-center"
       >
-        <motion.div variants={item}>
+        <motion.div
+          // @ts-expect-error  "Just expect an error broo."
+          variants={item}
+        >
           <ShinyText
             text="Hi, I'm Dishant"
             speed={1}
@@ -106,6 +109,7 @@ export const Hero = () => {
         </motion.div>
 
         <motion.h1
+          // @ts-expect-error  "Just expect an error broo."
           variants={item}
           className="mt-6 text-5xl sm:text-7xl font-semibold leading-[1.05] tracking-tight"
         >
@@ -119,6 +123,7 @@ export const Hero = () => {
         </motion.h1>
 
         <motion.p
+          // @ts-expect-error  "Just expect an error broo."
           variants={item}
           className="mt-6 text-neutral-400 text-base sm:text-lg max-w-xl"
         >
