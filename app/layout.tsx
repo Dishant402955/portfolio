@@ -1,5 +1,6 @@
 "use client";
 
+import { Analytics } from "@vercel/analytics/next";
 import { Figtree } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
@@ -16,7 +17,10 @@ const RootLayout = ({ children }: RootLayoutInterface) => {
       lang="en"
       className={cn("h-full", "antialiased", "font-sans", figtree.variable)}
     >
-      <body className="min-h-full flex flex-col w-full">{children}</body>
+      <body className="min-h-full flex flex-col w-full">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 };
