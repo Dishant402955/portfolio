@@ -2,13 +2,13 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
+
 import { blog } from "@/constants/blogs";
 
-export default function BlogPage() {
+const BlogPage = () => {
   return (
     <section className="w-full px-6 md:px-14 py-24">
       <div className="max-w-3xl mx-auto flex flex-col gap-16">
-        {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -27,7 +27,6 @@ export default function BlogPage() {
           <p className="text-neutral-400">{blog.description}</p>
         </motion.div>
 
-        {/* CONTENT */}
         <div className="flex flex-col gap-10">
           {blog.content.map((block, i) => {
             switch (block.type) {
@@ -110,4 +109,6 @@ export default function BlogPage() {
       </div>
     </section>
   );
-}
+};
+
+export default BlogPage;

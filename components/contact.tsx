@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { useState } from "react";
 import { MdContentCopy, MdDone } from "react-icons/md";
+
 import { email } from "@/constants/contact";
 
 export const Contact = () => {
@@ -20,7 +21,6 @@ export const Contact = () => {
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
         <div className="absolute -left-80 top-[10%] w-125 h-125 opacity-90 max-md:top-[-25%]">
           <svg className="w-full h-full" viewBox="0 0 500 500">
-            {/* ring */}
             <circle
               cx="250"
               cy="250"
@@ -30,7 +30,6 @@ export const Contact = () => {
               fill="none"
             />
 
-            {/* diagonal line */}
             <line
               x1="100"
               y1="100"
@@ -40,7 +39,6 @@ export const Contact = () => {
               strokeWidth="1.6"
             />
 
-            {/* horizontal */}
             <line
               x1="0"
               y1="250"
@@ -50,7 +48,6 @@ export const Contact = () => {
               strokeWidth="1.5"
             />
 
-            {/* nodes */}
             <circle cx="250" cy="250" r="5" fill="white" />
             <circle cx="150" cy="250" r="4" fill="rgba(255,255,255,0.85)" />
             <circle cx="350" cy="250" r="4" fill="rgba(255,255,255,0.85)" />
@@ -68,7 +65,6 @@ export const Contact = () => {
               fill="none"
             />
 
-            {/* diagonal line */}
             <line
               x1="120"
               y1="50"
@@ -78,7 +74,6 @@ export const Contact = () => {
               strokeWidth="1.6"
             />
 
-            {/* angled line */}
             <line
               x1="0"
               y1="200"
@@ -88,7 +83,6 @@ export const Contact = () => {
               strokeWidth="1.5"
             />
 
-            {/* nodes */}
             <circle cx="250" cy="250" r="5" fill="white" />
             <circle cx="300" cy="200" r="4" fill="rgba(255,255,255,0.85)" />
             <circle cx="200" cy="320" r="4" fill="rgba(255,255,255,0.85)" />

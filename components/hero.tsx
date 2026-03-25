@@ -2,10 +2,11 @@
 
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
-import ShinyText from "./ui/ShinyText";
-import { MorphingText } from "./ui/morphing-text";
-import { RainbowButton } from "./ui/rainbow-button";
-import { ShimmerButton } from "./ui/shimmer-button";
+
+import ShinyText from "@/components/ui/ShinyText";
+import { MorphingText } from "@/components/ui/morphing-text";
+import { RainbowButton } from "@/components/ui/rainbow-button";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
 
 export const Hero = () => {
   const texts = ["Full-stack apps", "Backend systems"];

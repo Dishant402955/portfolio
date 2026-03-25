@@ -2,13 +2,12 @@
 import { motion } from "motion/react";
 import { useEffect } from "react";
 
-export const Intro = ({
-  phase,
-  setPhase,
-}: {
+interface IntroInterface {
   phase: "intro" | "transition" | "done";
   setPhase: (p: "intro" | "transition" | "done") => void;
-}) => {
+}
+
+export const Intro = ({ phase, setPhase }: IntroInterface) => {
   useEffect(() => {
     if (phase === "intro") {
       const t = setTimeout(() => setPhase("transition"), 2300);

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
+
 import { items } from "@/constants/blogs";
 
 export const Blogs = () => {

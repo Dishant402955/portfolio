@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Card, CardDescription, CardTitle } from "./ui/cards-demo-3";
+
+import { Card, CardDescription, CardTitle } from "@/components/ui/cards-demo-3";
 import { cn } from "@/lib/utils";
 import ScrollStack from "@/components/ui/scroll-stack";
 import { items } from "@/constants/projects";

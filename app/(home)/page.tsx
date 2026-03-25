@@ -5,7 +5,7 @@ import { About } from "@/components/about";
 import { Contact } from "@/components/contact";
 import { SectionSeparator } from "@/components/section-seperator";
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="h-full w-full flex flex-col">
       <Hero />
@@ -19,4 +19,6 @@ export default function Home() {
       <Contact />
     </div>
   );
-}
+};
+
+export default Home;

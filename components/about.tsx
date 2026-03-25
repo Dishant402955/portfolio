@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import Image from "next/image";
+
 import { techGroups } from "@/constants/about";
 
 export const About = () => {
@@ -14,7 +15,6 @@ export const About = () => {
       <div className="absolute inset-0 pointer-events-none -z-10">
         <div className="absolute top-[6%] right-0 w-225 h-225 max-md:h-120 max-md:w-120">
           <svg className="w-full h-full" viewBox="0 0 900 900">
-            {/* OUTER ORBIT */}
             <g className="origin-[100%_50%] animate-[spin_110s_linear_infinite]">
               <circle
                 cx="900"
@@ -25,7 +25,6 @@ export const About = () => {
                 fill="none"
               />
 
-              {/* 4 evenly spaced stars */}
               <g transform="rotate(0 900 450)">
                 <circle cx="480" cy="450" r="5" fill="white" />
               </g>
@@ -50,7 +49,6 @@ export const About = () => {
               </g>
             </g>
 
-            {/* MID ORBIT */}
             <g className="origin-[100%_50%] animate-[spin_85s_linear_infinite]">
               <circle
                 cx="900"
@@ -82,7 +80,6 @@ export const About = () => {
               </g>
             </g>
 
-            {/* INNER ORBIT */}
             <g className="origin-[100%_50%] animate-[spin_65s_linear_infinite]">
               <circle
                 cx="900"
@@ -114,7 +111,6 @@ export const About = () => {
               </g>
             </g>
 
-            {/* CORE ORBIT */}
             <g className="origin-[100%_50%] animate-[spin_50s_linear_infinite]">
               <circle
                 cx="900"
@@ -139,7 +135,6 @@ export const About = () => {
             </g>
           </svg>
 
-          {/* 🔥 CORRECT VISIBILITY CONTROL */}
           <div
             className="absolute inset-0"
             style={{
@@ -154,7 +149,6 @@ export const About = () => {
       <div className="max-w-6xl mx-auto flex flex-col gap-20">
         <h2 className="text-3xl md:text-4xl font-semibold">About</h2>
 
-        {/* Intro */}
         <div className="max-w-3xl flex flex-col gap-6">
           <p className="text-lg md:text-xl text-neutral-200">
             I’m a pre-final year Computer Science student at IIIT Surat, focused
@@ -166,7 +160,6 @@ export const About = () => {
           </p>
         </div>
 
-        {/* Stack */}
         <div className="flex flex-col gap-8">
           <h3 className="text-lg font-medium text-neutral-300">Tools I Use</h3>
 
@@ -206,12 +199,10 @@ export const About = () => {
           </div>
         </div>
 
-        {/* PROFILES */}
         <div className="flex flex-col gap-6">
           <h3 className="text-lg font-medium text-neutral-300">Profiles</h3>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            {/* GitHub */}
             <motion.div
               initial={{ opacity: 0, y: 10, scale: 0.98 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -237,7 +228,6 @@ export const About = () => {
               </Link>
             </motion.div>
 
-            {/* LinkedIn */}
             <motion.div
               initial={{ opacity: 0, y: 10, scale: 0.98 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -263,7 +253,6 @@ export const About = () => {
               </Link>
             </motion.div>
 
-            {/* LeetCode */}
             <motion.div
               initial={{ opacity: 0, y: 10, scale: 0.98 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -292,7 +281,6 @@ export const About = () => {
         </div>
       </div>
 
-      {/* MODAL */}
       <AnimatePresence>
         {selectedTech && (
           <motion.div
@@ -310,7 +298,6 @@ export const About = () => {
               onClick={(e) => e.stopPropagation()}
               className="bg-neutral-900 border border-white/10 rounded-xl p-6 w-[90%] max-w-md"
             >
-              {/* Logo */}
               <div className="mb-4">
                 <Image
                   height={30}
@@ -321,12 +308,10 @@ export const About = () => {
                 />
               </div>
 
-              {/* Name */}
               <h3 className="text-xl font-semibold text-white mb-2">
                 {selectedTech.name}
               </h3>
 
-              {/* Description */}
               <p className="text-neutral-400 text-sm">
                 {selectedTech.description || "Add description here."}
               </p>

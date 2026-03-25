@@ -1,13 +1,18 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { MdMenu } from "react-icons/md";
+
+import { cn } from "@/lib/utils";
 import { navItems } from "@/constants/navbar";
 
-export const Navbar = ({ showBrand }: { showBrand: boolean }) => {
+interface NavbarInterface {
+  showBrand: boolean;
+}
+
+export const Navbar = ({ showBrand }: NavbarInterface) => {
   const [activeHash, setActiveHash] = useState("");
   const [open, setOpen] = useState(false);
 
@@ -37,7 +42,6 @@ export const Navbar = ({ showBrand }: { showBrand: boolean }) => {
       for (const section of sections) {
         const rect = section.getBoundingClientRect();
 
-        // section whose top is closest but still above mid screen
         if (rect.top <= window.innerHeight * 0.4) {
           currentSection = section;
         }
@@ -50,7 +54,6 @@ export const Navbar = ({ showBrand }: { showBrand: boolean }) => {
         history.replaceState(null, "", newHash);
       }
 
-      // reset scroll flag after frame
       requestAnimationFrame(() => {
         isScrolling = false;
       });

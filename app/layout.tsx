@@ -1,16 +1,16 @@
 "use client";
 
-import "./globals.css";
 import { Figtree } from "next/font/google";
 import { cn } from "@/lib/utils";
+import "./globals.css";
 
 const figtree = Figtree({ subsets: ["latin"], variable: "--font-sans" });
 
-export default function RootLayout({
-  children,
-}: {
+interface RootLayoutInterface {
   children: React.ReactNode;
-}) {
+}
+
+const RootLayout = ({ children }: RootLayoutInterface) => {
   return (
     <html
       lang="en"
@@ -19,4 +19,6 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col w-full">{children}</body>
     </html>
   );
-}
+};
+
+export default RootLayout;
