@@ -2,65 +2,9 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
+import { items } from "@/constants/blogs";
 
 export const Blogs = () => {
-  const items = [
-    {
-      id: 1,
-      slug: "first-blog",
-      title: "First Blog",
-      description:
-        "It's an authentication server with support for email-password, OAuth, passkey & OTP[email] & webhooks.",
-      thumbURL:
-        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      id: 2,
-      slug: "second-blog",
-      title: "Second Blog",
-      description:
-        "A deep dive into modern web development, covering Next.js, React, and server-side rendering techniques.",
-      thumbURL:
-        "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      id: 3,
-      slug: "third-blog",
-      title: "Third Blog",
-      description:
-        "Exploring state management solutions, from Redux to Zustand and everything in between.",
-      thumbURL:
-        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      id: 4,
-      slug: "fourth-blog",
-      title: "Fourth Blog",
-      description:
-        "Performance optimization strategies for large-scale React applications, including lazy loading and code splitting.",
-      thumbURL:
-        "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      id: 5,
-      slug: "fifth-blog",
-      title: "Fifth Blog",
-      description:
-        "Understanding TypeScript for React developers: tips, tricks, and common pitfalls.",
-      thumbURL:
-        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      id: 6,
-      slug: "sixth-blog",
-      title: "Sixth Blog",
-      description:
-        "Building accessible web applications: ARIA, keyboard navigation, and screen reader support.",
-      thumbURL:
-        "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?q=80&w=800&auto=format&fit=crop",
-    },
-  ];
-
   return (
     <section id="blog" className="w-full pb-15 pt-20">
       <div className="px-4 md:px-6 lg:px-10 mb-16 text-center pt-4">

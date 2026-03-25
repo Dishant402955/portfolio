@@ -5,16 +5,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { MdMenu } from "react-icons/md";
+import { navItems } from "@/constants/navbar";
 
 export const Navbar = ({ showBrand }: { showBrand: boolean }) => {
-  const navItems = [
-    { name: "Home", link: "#home" },
-    { name: "Projects", link: "#projects" },
-    { name: "Blog", link: "#blog" },
-    { name: "About", link: "#about" },
-    { name: "Contact", link: "#contact" },
-  ];
-
   const [activeHash, setActiveHash] = useState("");
   const [open, setOpen] = useState(false);
 

@@ -4,11 +4,10 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { useState } from "react";
 import { MdContentCopy, MdDone } from "react-icons/md";
+import { email } from "@/constants/contact";
 
 export const Contact = () => {
   const [copied, setCopied] = useState(false);
-
-  const email = "dishantradadiya3036@gmail.com";
 
   const copyEmail = async () => {
     await navigator.clipboard.writeText(email);

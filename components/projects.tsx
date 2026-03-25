@@ -4,86 +4,9 @@ import Link from "next/link";
 import { Card, CardDescription, CardTitle } from "./ui/cards-demo-3";
 import { cn } from "@/lib/utils";
 import ScrollStack from "@/components/ui/scroll-stack";
+import { items } from "@/constants/projects";
 
 export const Projects = () => {
-  const items = [
-    {
-      id: 1,
-      slug: "cross-platform-clipboard",
-      title: "Cross-Platform Clipboard",
-      description:
-        "It's a cross platform clipboard with end-to-end encryption & real-time sync supporting Android, iOS, Windows , built purely for productivity purposes",
-      previewLink: "https://example.com",
-      projectLink: "https://github.com/example",
-      thumbURL: "",
-      techStack: [
-        { name: "Nextjs", logo: "" },
-        { name: "Shadcn UI", logo: "" },
-        { name: "Appwrite", logo: "" },
-      ],
-    },
-    {
-      id: 2,
-      slug: "personal-knowledge-OS",
-      title: "Personal Knowledge OS",
-      description:
-        "It's a system to management modern personal knowledge with an web interface, built purely for productivity purposes",
-      previewLink: "https://example.com",
-      projectLink: "https://github.com/example",
-      thumbURL: "",
-      techStack: [
-        { name: "Nextjs", logo: "" },
-        { name: "Shadcn UI", logo: "" },
-        { name: "Appwrite", logo: "" },
-      ],
-    },
-    {
-      id: 3,
-      slug: "auth-server",
-      title: "Auth server",
-      description:
-        "It's a authentication server with support for email-password, OAuth, passkey & OTP[email] & webhooks.",
-      previewLink: "https://example.com",
-      projectLink: "https://github.com/example",
-      thumbURL: "",
-      techStack: [
-        { name: "Nextjs", logo: "" },
-        { name: "Shadcn UI", logo: "" },
-        { name: "Honojs", logo: "" },
-      ],
-    },
-    {
-      id: 4,
-      slug: "secrets-management-service",
-      title: "Secrets Manager",
-      description:
-        "It's a Secrets vault to store your API keys as well to enable Bring-Your-Own-Keys architecture without hasitation with help of a CLI, web interface & API endpoints.",
-      previewLink: "https://example.com",
-      projectLink: "https://github.com/example",
-      thumbURL: "",
-      techStack: [
-        { name: "Nextjs", logo: "" },
-        { name: "Shadcn UI", logo: "" },
-        { name: "Honojs", logo: "" },
-      ],
-    },
-    {
-      id: 5,
-      slug: "screen-recording-and-instant-sharing",
-      title: "Screen recording & instant sharing app",
-      description:
-        "It's a cross platform screen recording & instant sharing app.",
-      previewLink: "https://example.com",
-      projectLink: "https://github.com/example",
-      thumbURL: "",
-      techStack: [
-        { name: "Nextjs", logo: "" },
-        { name: "Shadcn UI", logo: "" },
-        { name: "Electron", logo: "" },
-      ],
-    },
-  ];
-
   return (
     <section id="projects" className="w-full pt-18 relative">
       <div className="px-4 md:px-6 lg:px-10 mb-18 flex justify-center items-center pt-6">

@@ -2,27 +2,9 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
+import { project } from "@/constants/projects";
 
 const ProjectPage = () => {
-  const project = {
-    title: "Cross-Platform Clipboard",
-    description:
-      "A secure cross-platform clipboard with end-to-end encryption and real-time sync across Android, iOS, and Windows.",
-    longDescription:
-      "This project focuses on seamless cross-device productivity. It allows users to securely sync clipboard data in real-time while ensuring end-to-end encryption. Built with performance and reliability in mind, it supports multiple platforms and provides a smooth user experience across devices.",
-    techStack: ["Next.js", "Hono", "PostgreSQL", "WebSockets"],
-    features: [
-      "End-to-end encrypted clipboard sync",
-      "Real-time updates across devices",
-      "Cross-platform support (Android, iOS, Windows)",
-      "Minimal latency and high reliability",
-    ],
-    previewLink: "https://example.com",
-    sourceLink: "https://github.com/example",
-    image:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
-  };
-
   return (
     <section className="w-full px-6 md:px-14 py-24">
       <div className="max-w-5xl mx-auto flex flex-col gap-20">
