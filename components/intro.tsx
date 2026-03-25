@@ -23,7 +23,7 @@ export const Intro = ({
 
   return (
     <motion.div
-      className="fixed h-screen w-screen z-[999] bg-black flex items-center justify-center"
+      className="fixed h-screen w-screen z-999 bg-black flex items-center justify-center"
       animate={{ opacity: phase === "transition" ? 0 : 1 }}
       transition={{ duration: 0.6 }}
     >

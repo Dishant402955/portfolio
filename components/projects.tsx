@@ -99,7 +99,7 @@ export const Projects = () => {
               className="flex justify-center w-full max-md:px-8"
               key={item.id}
             >
-              <Card className="relative overflow-hidden rounded-xl w-full max-w-[1000px] h-[440px] bg-white dark:bg-neutral-900">
+              <Card className="relative overflow-hidden rounded-xl w-full max-w-250 h-110 bg-white dark:bg-neutral-900">
                 <div className="pointer-events-none absolute inset-0">
                   <div className="beam-dot" />
                 </div>

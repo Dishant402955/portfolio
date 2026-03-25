@@ -84,7 +84,7 @@ export const Hero = () => {
           }}
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-black/70" />
       </div>
       <motion.div
         variants={container}

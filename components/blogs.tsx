@@ -67,7 +67,7 @@ export const Blogs = () => {
         <h2 className="text-3xl md:text-4xl font-semibold text-white">Blogs</h2>
       </div>
 
-      <div className="max-w-[1100px] mx-auto px-4 md:px-6 lg:px-10 grid grid-cols-1 md:grid-cols-2 gap-6 max-md:px-10">
+      <div className="max-w-275 mx-auto px-4 md:px-6 lg:px-10 grid grid-cols-1 md:grid-cols-2 gap-6 max-md:px-10">
         {items.map((item) => (
           <motion.div
             key={item.id}

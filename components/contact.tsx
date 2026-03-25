@@ -19,7 +19,7 @@ export const Contact = () => {
   return (
     <section id="contact" className="w-full px-6 md:px-14 py-28 relative">
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
-        <div className="absolute left-[-320px] top-[10%] w-[500px] h-[500px] opacity-90 max-md:top-[-25%]">
+        <div className="absolute -left-80 top-[10%] w-125 h-125 opacity-90 max-md:top-[-25%]">
           <svg className="w-full h-full" viewBox="0 0 500 500">
             {/* ring */}
             <circle
@@ -58,7 +58,7 @@ export const Contact = () => {
           </svg>
         </div>
 
-        <div className="absolute right-[-320px] top-[10%] w-[500px] h-[500px] opacity-90 max-md:top-[75%]">
+        <div className="absolute -right-80 top-[10%] w-125 h-125 opacity-90 max-md:top-[75%]">
           <svg className="w-full h-full" viewBox="0 0 500 500">
             <circle
               cx="250"
@@ -128,7 +128,7 @@ export const Contact = () => {
               damping: 12,
               duration: 0.3,
             }}
-            className="flex-1 border border-white/20 min-w-[33%] rounded-xl p-6 bg-white/2 hover:border-white/50 hover:bg-white/[0.04] transition"
+            className="flex-1 border border-white/20 min-w-[33%] rounded-xl p-6 bg-white/2 hover:border-white/50 hover:bg-white/4 transition"
           >
             <p className="text-neutral-500 text-sm mb-2">Email</p>
             <div className="w-full flex justify-center items-center gap-x-2 ">
@@ -153,7 +153,7 @@ export const Contact = () => {
               damping: 12,
               duration: 0.3,
             }}
-            className="flex-1 border border-white/20 rounded-xl p-6 bg-white/[0.02] hover:border-white/50 hover:bg-white/[0.04] transition"
+            className="flex-1 border border-white/20 rounded-xl p-6 bg-white/2 hover:border-white/50 hover:bg-white/4 transition"
           >
             <p className="text-neutral-500 text-sm mb-2">LinkedIn</p>
             <Link
@@ -176,7 +176,7 @@ export const Contact = () => {
               damping: 12,
               duration: 0.3,
             }}
-            className="flex-1 border border-white/20 rounded-xl p-6 bg-white/[0.02] hover:border-white/50 hover:bg-white/[0.04] transition"
+            className="flex-1 border border-white/20 rounded-xl p-6 bg-white/2 hover:border-white/50 hover:bg-white/4 transition"
           >
             <p className="text-neutral-500 text-sm mb-2">Resume</p>
             <Link

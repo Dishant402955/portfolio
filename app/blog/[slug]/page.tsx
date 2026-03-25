@@ -220,7 +220,7 @@ function encrypt(text: string, key: string) {
                   >
                     <img
                       src={block.src}
-                      className="w-full h-[300px] md:h-[400px] object-cover"
+                      className="w-full h-75 md:h-100 object-cover"
                       alt="blog"
                     />
                   </motion.div>
